@@ -1,12 +1,13 @@
 import { useState } from "react";
 
+const ItemCount = ({stock,initial,onAdd})=>{
 
-const ItemCount = ()=>{
-
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState(initial)
 
     function increment (){
+        if (quantity < stock){
             setQuantity(quantity+1)
+        }
     }
 
     function decrement (){
@@ -23,14 +24,14 @@ const ItemCount = ()=>{
             </div>
         </div>
         <div className="columns">
-            <div className="column">
+            <div className="column is-2">
                 <button className="button is-success is-large is-fullwidth " onClick={decrement}>-</button>
             </div>
-            <div className="column">
+            <div className="column is-2">
                 <button className="button is-success is-large is-fullwidth" onClick={increment}>+</button>
             </div>
-            <div className="column">
-                <button className="button is-success is-large is-fullwidth">Agregar al carrito</button>
+            <div className="column is-8">
+                <button className="button is-success is-large is-fullwidth" onClick={()=>onAdd(quantity)} disabled={!stock} >Agregar al carrito</button>
             </div>
         </div>
     </div>

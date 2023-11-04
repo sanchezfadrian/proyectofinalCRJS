@@ -14,19 +14,19 @@ const NavBar = () =>{
                         <Link to="/" className="navbar-item">
                             Todos
                         </Link>
-                        <Link to="category/men's clothing" className="navbar-item">
-                            Ropa de hombre
+                        <Link to="category/motherboard" className="navbar-item">
+                            Motherboard
                         </Link>
-                        <Link to="category/jewelery" className="navbar-item">
-                            Joyas
+                        <Link to="category/procesadores" className="navbar-item">
+                            Procesadores
                         </Link>
-                        <Link to="category/electronics" className="navbar-item">
-                            Electronica
+                        <Link to="category/memorias" className="navbar-item">
+                            Memorias
                         </Link>
-                        <Link to="category/women's clothing" className="navbar-item">
-                            Ropa de mujer
+                        <Link to="category/placas_de_video" className="navbar-item">
+                            Placas de video
                         </Link>
-                        <Link to="" className="navbar-item">
+                        <Link to="/cart" className="navbar-item">
                             <CartWidget/>
                         </Link>
                     </div>
